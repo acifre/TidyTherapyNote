@@ -19,24 +19,26 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Text("Dirty Note")
-                    .padding(1)
+                    .padding(5)
+                    .border(.red)
                 ScrollView {
                     Text(currentRequest)
                         .padding()
                 }
                 .frame(maxWidth: .infinity)
-                .border(.black)
+                .border(.primary)
                 .cornerRadius(5)
                 .padding()
                 
                 Text("Cleaned Note")
-                    .padding(1)
+                    .padding(5)
+                    .border(.blue)
                 ScrollView {
                     Text(cleanedNote)
                         .padding()
                 }
                 .frame(maxWidth: .infinity)
-                .border(.black)
+                .border(.primary)
                 .cornerRadius(5)
                 .padding()
                 
@@ -44,18 +46,21 @@ struct ContentView: View {
                     HStack {
                         TextField("Patient's Name", text: $patientName)
                             .textFieldStyle(.roundedBorder)
-                            .border(.black)
-                            .padding()
+                            .border(.primary)
+                            .cornerRadius(2)
+                            .padding(1)
                         TextField("Guardian's Name", text: $guardianName)
                             .textFieldStyle(.roundedBorder)
-                            .border(.black)
-                            .padding()
+                            .border(.primary)
+                            .cornerRadius(2)
+                            .padding(1)
                     }
                     HStack {
                         TextField("Enter your note text", text: $dirtyNote, axis: .vertical)
                             .textFieldStyle(.roundedBorder)
                             .border(.blue)
-                            .padding()
+                            .cornerRadius(2)
+                            .padding(1)
 
                     }
                     Button("Send") {
@@ -81,7 +86,7 @@ struct ContentView: View {
         }
         notes.append("Me: \n\n\(dirtyNote.trimmingCharacters(in: .whitespaces)) \n")
         self.currentRequest = dirtyNote.trimmingCharacters(in: .whitespaces)
-        viewmodel.send(text: chatRole + dirtyNote.replacingOccurrences(of: patientName, with: "Anthony", options: .caseInsensitive)) {
+        viewmodel.send(text: chatRole + dirtyNote.replacingOccurrences(of: patientName, with: "John Doe", options: .caseInsensitive)) {
             result in print(result)
             self.notes.append("Cleaned Note: \n" + result)
             self.cleanedNote = result.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -94,14 +99,14 @@ struct ContentView_Previews: PreviewProvider {
     static
     var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
 
 // TODO:
-// - Save conversations
-// - Make my text and chatbot text distinguishable
-// - Have bot remember previous three rounds of conversation
-// - Add animation when response is received
-// - Create a field to hold a role for the bot
+// - Finish UI of app
+// - Add animation when response is loading
+// - Make it so that chat input pops out to better read input
+// - Create a field to change role for the bot
 // - Create a settings page to change number of tokens, hold a role, change from light to dark mode
 // - Create a button to clear the chat
