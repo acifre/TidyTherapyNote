@@ -33,9 +33,9 @@ struct TitleRow: View {
             VStack(alignment: .leading) {
                 Text(name)
                     .font(.title).bold()
-                Text("Online")
-                    .font(.caption)
-                    .foregroundColor(.white)
+//                Text("Online")
+//                    .font(.caption)
+//                    .foregroundColor(.white)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
              
