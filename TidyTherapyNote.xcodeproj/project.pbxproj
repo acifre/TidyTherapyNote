@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C05A5F82A087093003FD12F /* Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C05A5F72A087093003FD12F /* Private.swift */; };
+		6C05A5FA2A0870BA003FD12F /* TitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C05A5F92A0870BA003FD12F /* TitleRow.swift */; };
+		6C05A5FC2A0870E0003FD12F /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C05A5FB2A0870E0003FD12F /* ChatBot.swift */; };
+		6C05A5FE2A0870EB003FD12F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C05A5FD2A0870EB003FD12F /* Extensions.swift */; };
+		6C05A6002A0872AA003FD12F /* ChatBotSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C05A5FF2A0872AA003FD12F /* ChatBotSettings.swift */; };
+		6C05A6022A0874F6003FD12F /* NoteRequestFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C05A6012A0874F6003FD12F /* NoteRequestFields.swift */; };
+		6C05A6042A087573003FD12F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C05A6032A087573003FD12F /* Note.swift */; };
 		6CA514832A06BBB800089923 /* TidyTherapyNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA514822A06BBB800089923 /* TidyTherapyNoteApp.swift */; };
 		6CA514852A06BBB800089923 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA514842A06BBB800089923 /* ContentView.swift */; };
 		6CA514872A06BBB900089923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CA514862A06BBB900089923 /* Assets.xcassets */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C05A5F72A087093003FD12F /* Private.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Private.swift; sourceTree = "<group>"; };
+		6C05A5F92A0870BA003FD12F /* TitleRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleRow.swift; sourceTree = "<group>"; };
+		6C05A5FB2A0870E0003FD12F /* ChatBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
+		6C05A5FD2A0870EB003FD12F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6C05A5FF2A0872AA003FD12F /* ChatBotSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBotSettings.swift; sourceTree = "<group>"; };
+		6C05A6012A0874F6003FD12F /* NoteRequestFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRequestFields.swift; sourceTree = "<group>"; };
+		6C05A6032A087573003FD12F /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		6CA5147F2A06BBB800089923 /* TidyTherapyNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TidyTherapyNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA514822A06BBB800089923 /* TidyTherapyNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidyTherapyNoteApp.swift; sourceTree = "<group>"; };
 		6CA514842A06BBB800089923 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +52,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C05A5F42A08701F003FD12F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6CA514902A06BC0600089923 /* ViewModel.swift */,
+				6C05A5FD2A0870EB003FD12F /* Extensions.swift */,
+				6C05A5FB2A0870E0003FD12F /* ChatBot.swift */,
+				6C05A6032A087573003FD12F /* Note.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6C05A5F52A087029003FD12F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6C05A5F92A0870BA003FD12F /* TitleRow.swift */,
+				6C05A5FF2A0872AA003FD12F /* ChatBotSettings.swift */,
+				6C05A6012A0874F6003FD12F /* NoteRequestFields.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6C05A5F62A087083003FD12F /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				6CF0E3882A06EC81006DB88B /* APIKey.swift */,
+				6C05A5F72A087093003FD12F /* Private.swift */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
 		6CA514762A06BBB800089923 = {
 			isa = PBXGroup;
 			children = (
@@ -57,12 +101,13 @@
 		6CA514812A06BBB800089923 /* TidyTherapy */ = {
 			isa = PBXGroup;
 			children = (
+				6C05A5F62A087083003FD12F /* Private */,
+				6C05A5F52A087029003FD12F /* Components */,
+				6C05A5F42A08701F003FD12F /* Models */,
 				6CA514822A06BBB800089923 /* TidyTherapyNoteApp.swift */,
 				6CA514842A06BBB800089923 /* ContentView.swift */,
-				6CA514902A06BC0600089923 /* ViewModel.swift */,
 				6CA514862A06BBB900089923 /* Assets.xcassets */,
 				6CA514882A06BBB900089923 /* Preview Content */,
-				6CF0E3882A06EC81006DB88B /* APIKey.swift */,
 			);
 			path = TidyTherapy;
 			sourceTree = "<group>";
@@ -153,8 +198,15 @@
 			files = (
 				6CA514852A06BBB800089923 /* ContentView.swift in Sources */,
 				6CA514912A06BC0600089923 /* ViewModel.swift in Sources */,
+				6C05A5F82A087093003FD12F /* Private.swift in Sources */,
+				6C05A5FE2A0870EB003FD12F /* Extensions.swift in Sources */,
+				6C05A5FC2A0870E0003FD12F /* ChatBot.swift in Sources */,
 				6CF0E3892A06EC81006DB88B /* APIKey.swift in Sources */,
+				6C05A6022A0874F6003FD12F /* NoteRequestFields.swift in Sources */,
+				6C05A6042A087573003FD12F /* Note.swift in Sources */,
 				6CA514832A06BBB800089923 /* TidyTherapyNoteApp.swift in Sources */,
+				6C05A5FA2A0870BA003FD12F /* TitleRow.swift in Sources */,
+				6C05A6002A0872AA003FD12F /* ChatBotSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
